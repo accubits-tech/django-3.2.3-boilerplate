@@ -22,7 +22,7 @@ Windows - `set ENVIRON=staging && python manage.py runserver`
 
 ### Database Configuration
 ** MYSQL **
-DATABASES = {
+- DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
          'NAME': "db_name",
@@ -34,7 +34,7 @@ DATABASES = {
  }
 
 ** POSTGRESS **
-DATABASES = {
+- DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
 		'NAME': 'db_name',
@@ -46,7 +46,7 @@ DATABASES = {
 }
 
 ** SQLITE **
-DATABASES = {
+- DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
