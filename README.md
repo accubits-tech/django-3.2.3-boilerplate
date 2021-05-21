@@ -32,6 +32,13 @@ Windows - `set ENVIRON=staging && python manage.py runserver`
          'PORT': 'port'
      }
  }
+#####add these commands into django_project/__init__.py file
+import pymysql
+<br>
+pymysql.version_info = (1, 4, 0, "final", 0)
+<br>
+pymysql.install_as_MySQLdb()
+
 
 ** POSTGRESS **
 - DATABASES = {
