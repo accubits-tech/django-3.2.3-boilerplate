@@ -1,5 +1,5 @@
-*.xml
 *.pyc
-django_project/.env
 django_project/.idea/
-django_project/.env.stage
+django_project/.env*
+
+.idea/

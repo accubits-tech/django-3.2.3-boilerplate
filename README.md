@@ -11,8 +11,45 @@ This boilerplate enables the team to quickly setup a Django project environment 
 
 <br>
 
-RUN below command to set ENVIRON (env /local /dev /stage /prod
-in Ubuntu:
-	export ENVIRON=<environment name>
-in Windows:
-	set ENVIRON=<environment name>
+### Run app in local machine with dev , staging or production configurations
+It's easier to debug issues in staging environment, if we can connect to staging db and other services from our local machine.
+  
+**Steps**
+- Duplicate .env file with name `.env.staging` and update all staging config
+- Run app using  
+Linux - `export ENVIRON=staging && python manage.py runserver`
+Windows - `set ENVIRON=staging && python manage.py runserver`
+
+### Database Configuration
+** MYSQL **
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': "db_name",
+         'USER': 'user',
+         'PASSWORD': 'password',
+         'HOST': 'host',
+         'PORT': 'port'
+     }
+ }
+
+** POSTGRESS **
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql_psycopg2',
+		'NAME': 'db_name',
+		'USER': 'user',
+		'PASSWORD': 'password',
+		'HOST': 'host',
+		'PORT': 'port',
+	}
+}
+
+** SQLITE **
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+ 
